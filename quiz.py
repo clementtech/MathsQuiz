@@ -1,7 +1,9 @@
 import sys
 import random
 
-print("Welcome to Math Quiz!")
+print("=" * 30)
+print(" Welcome to Math Quiz! ".center(30, "="))
+print("=" * 30)
 print("Please select the type of quiz.")
 
 
@@ -9,25 +11,27 @@ def main():
     equation = get_equation()
     length_of_equation = get_length()
     number = get_number(length_of_equation)
+    ai_consent = get_ai_consent()
 
-    print(equation, length_of_equation, number)
-
+    print(f"Equation: {equation}")
+    print(f"Length of Equation: {length_of_equation}")
+    print(f"Numbers: {number}")
+    print(f"AI Consent: {ai_consent}")
 
 def get_equation():
     while True:
-        print("Please select '+' or '-' or '*' or '/'")
+        print("Please select one of the following operations: +, -, *, /")
         equation = input(str("Equation: "))
 
-        if equation != "+" and equation != "-" and equation != "*" and equation != "/":
-            print("Invalid equation.")
-
-        elif equation == "+" or equation == "-" or equation == "*" or equation == "/":
+        if equation in ["+", "-", "*", "/"]:
             return equation
+        else:
+            print("Invalid equation. Please choose one of +, -, *, /.")
 
 def get_length():
     while True:
         try:
-            length = int(input("Length of equation (1, 2, ..., 10): "))
+            length = int(input("Enter the length of the equation (choose a number between 1 and 10): "))
 
             if 1 <= length <= 10:
                 return length
@@ -100,6 +104,13 @@ def get_number(length_of_equation):
 
         return (x, y)
 
+def get_ai_consent():
+    while True:
+        consent = input("Do you want Google Gemini to explain the questions to you? (y/n): ").strip().lower()
+        if consent in ['y', 'n']:
+            return consent == 'y'
+        else:
+            print("Invalid input. Please enter 'y' for yes or 'n' for no.")
 
 
 if __name__ == "__main__":
