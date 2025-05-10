@@ -5,6 +5,10 @@ print("Please select the type of quiz.")
 
 
 def main():
+    get_equation()
+
+
+def get_equation():
     while True:
         print("Please select '+' or '-' or '*' or '/'")
         equation = input(str("Equation: "))
@@ -13,8 +17,7 @@ def main():
             print("Invalid equation.")
 
         elif equation == "+" or equation == "-" or equation == "*" or equation == "/":
-            equation_operator(equation)
-            break
+            return equation_operator(equation)
 
 
 def equation_operator(equation):
