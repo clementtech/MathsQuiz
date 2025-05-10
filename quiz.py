@@ -5,7 +5,7 @@ print("Please select the type of quiz.")
 
 
 def main():
-    get_equation()
+    print(get_equation())
 
 
 def get_equation():
@@ -17,11 +17,9 @@ def get_equation():
             print("Invalid equation.")
 
         elif equation == "+" or equation == "-" or equation == "*" or equation == "/":
-            return equation_operator(equation)
+            return equation
 
 
-def equation_operator(equation):
-    print(equation)
 
 if __name__ == "__main__":
     main()
