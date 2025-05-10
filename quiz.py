@@ -8,6 +8,8 @@ print("Please select the type of quiz.")
 
 
 def main():
+    with open("ai.txt", "a") as ai_consent_save:
+        ... 
     equation = get_equation()
     length_of_equation = get_length()
     number = get_number(length_of_equation)
