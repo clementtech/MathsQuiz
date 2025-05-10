@@ -5,7 +5,10 @@ print("Please select the type of quiz.")
 
 
 def main():
-    print(get_equation())
+    equation = get_equation()
+    length_of_equation = get_length()
+
+    print(equation, length_of_equation)
 
 
 def get_equation():
@@ -19,6 +22,13 @@ def get_equation():
         elif equation == "+" or equation == "-" or equation == "*" or equation == "/":
             return equation
 
+def get_length():
+    while True:
+        try:
+            return int(input("Length of equation: "))
+
+        except ValueError:
+            print("Invalid number of length.")
 
 
 if __name__ == "__main__":
