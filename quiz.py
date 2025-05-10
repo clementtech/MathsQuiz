@@ -27,9 +27,9 @@ def get_equation():
 def get_length():
     while True:
         try:
-            length = int(input("Length of equation (1, 2, 3): "))
+            length = int(input("Length of equation (1, 2, ..., 10): "))
 
-            if length == 1 or length == 2 or length == 3:
+            if 1 <= length <= 10:
                 return length
             
             else:
@@ -44,19 +44,61 @@ def get_number(length_of_equation):
         x = random.randint(0, 9)
         y = random.randint(0, 9)
 
-        return(x, y)
-    
-    elif length_of_equation == 2:
-        x = random.randint(00, 99)
-        y = random.randint(00, 99)
+        return (x, y)
 
-        return(x, y)
+    elif length_of_equation == 2:
+        x = random.randint(10, 99)
+        y = random.randint(10, 99)
+
+        return (x, y)
 
     elif length_of_equation == 3:
-        x = random.randint(000, 999)
-        y = random.randint(000, 999)
+        x = random.randint(100, 999)
+        y = random.randint(100, 999)
 
-        return(x, y)
+        return (x, y)
+
+    elif length_of_equation == 4:
+        x = random.randint(1000, 9999)
+        y = random.randint(1000, 9999)
+
+        return (x, y)
+
+    elif length_of_equation == 5:
+        x = random.randint(10000, 99999)
+        y = random.randint(10000, 99999)
+
+        return (x, y)
+
+    elif length_of_equation == 6:
+        x = random.randint(100000, 999999)
+        y = random.randint(100000, 999999)
+
+        return (x, y)
+
+    elif length_of_equation == 7:
+        x = random.randint(1000000, 9999999)
+        y = random.randint(1000000, 9999999)
+
+        return (x, y)
+
+    elif length_of_equation == 8:
+        x = random.randint(10000000, 99999999)
+        y = random.randint(10000000, 99999999)
+
+        return (x, y)
+
+    elif length_of_equation == 9:
+        x = random.randint(100000000, 999999999)
+        y = random.randint(100000000, 999999999)
+
+        return (x, y)
+
+    elif length_of_equation == 10:
+        x = random.randint(1000000000, 9999999999)
+        y = random.randint(1000000000, 9999999999)
+
+        return (x, y)
 
 
 
