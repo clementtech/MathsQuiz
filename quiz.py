@@ -11,11 +11,14 @@ def main():
     equation = get_equation()
     length_of_equation = get_length()
     number_x, number_y = get_number(length_of_equation)
-    question = get_question(number_x, number_y)
+    answer = get_answer(number_x, number_y, equation)
+    question = get_question(number_x, number_y, equation, answer)
 
     print(f"Equation: {equation}")
     print(f"Length of Equation: {length_of_equation}")
     print(f"Numbers: {number_x, number_y}")
+    print(f"Answer: {answer}")
+    print(question)
 
 
 def get_equation():
@@ -106,8 +109,36 @@ def get_number(length_of_equation):
 
 
 
-def get_question():
-    ...
+def get_answer(x, y, e):
 
+    if e == "+":
+        return (x + y)
+    
+    elif e == "-":
+        return (x - y)
+
+    elif e == "*":
+        return (x * y)
+
+    elif e == "/":
+        return (x * y)
+    
+def get_question(x, y, e, a):
+    try:
+
+        while True:
+
+            question = input((f"{x} {e} {y} ="))
+
+            if question != a:
+                print("WRONG! Please try again.")
+
+            elif question == a:
+                return True
+        
+    except ValueError:
+        print("Invalid input.")
+
+    
 if __name__ == "__main__":
     main()
