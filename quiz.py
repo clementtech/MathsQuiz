@@ -10,14 +10,13 @@ print("Please select the type of quiz.")
 def main():
     equation = get_equation()
     length_of_equation = get_length()
-    number = get_number(length_of_equation)
-    ai_consent = get_ai_consent()
-    question = get_question()
+    number_x, number_y = get_number(length_of_equation)
+    question = get_question(number_x, number_y)
 
     print(f"Equation: {equation}")
     print(f"Length of Equation: {length_of_equation}")
-    print(f"Numbers: {number}")
-    print(f"AI Consent: {ai_consent}")
+    print(f"Numbers: {number_x, number_y}")
+
 
 def get_equation():
     while True:
@@ -105,13 +104,7 @@ def get_number(length_of_equation):
 
         return (x, y)
 
-def get_ai_consent():
-    while True:
-        consent = input("Do you want Google Gemini to explain the questions to you? (y/n): ").strip().lower()
-        if consent in ['y', 'n']:
-            return consent == 'y'
-        else:
-            print("Invalid input. Please enter 'y' for yes or 'n' for no.")
+
 
 def get_question():
     ...
