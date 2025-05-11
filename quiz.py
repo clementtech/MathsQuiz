@@ -12,6 +12,7 @@ def main():
     length_of_equation = get_length()
     number = get_number(length_of_equation)
     ai_consent = get_ai_consent()
+    question = get_question()
 
     print(f"Equation: {equation}")
     print(f"Length of Equation: {length_of_equation}")
@@ -112,6 +113,8 @@ def get_ai_consent():
         else:
             print("Invalid input. Please enter 'y' for yes or 'n' for no.")
 
+def get_question():
+    ...
 
 if __name__ == "__main__":
     main()
