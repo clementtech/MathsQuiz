@@ -10,15 +10,13 @@ print("Please select the type of quiz.")
 def main():
     equation = get_equation()
     length_of_equation = get_length()
-    number_x, number_y = get_number(length_of_equation)
-    answer = get_answer(number_x, number_y, equation)
-    question = get_question(number_x, number_y, equation, answer)
 
-    print(f"Equation: {equation}")
-    print(f"Length of Equation: {length_of_equation}")
-    print(f"Numbers: {number_x, number_y}")
-    print(f"Answer: {answer}")
-    print(question)
+    while True:
+        number_x, number_y = get_number(length_of_equation)
+        answer = get_answer(number_x, number_y, equation)
+        question = get_question(number_x, number_y, equation, answer)
+
+    
 
 
 def get_equation():
@@ -128,13 +126,18 @@ def get_question(x, y, e, a):
 
         while True:
 
-            question = int(input((f"{x} {e} {y} = ")))
+            question = str(input((f"{x} {e} {y} = ")))
 
-            if question != a:
-                print("WRONG! Please try again.")
+            if question == "stop":
+                return False
+            
+            else:
+                question = int(question)
+                if question != a:
+                    print("WRONG! Please try again.")
 
-            elif question == a:
-                return True
+                elif question == a:
+                    return True
         
     except ValueError:
         print("Invalid input.")
