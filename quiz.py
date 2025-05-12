@@ -128,7 +128,9 @@ def get_question(x, y, e, a):
 
         while True:
 
-            question = input((f"{x} {e} {y} = "))
+            print(a)
+            print(type(a))
+            question = int(input((f"{x} {e} {y} = ")))
 
             if question != a:
                 print("WRONG! Please try again.")
