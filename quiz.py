@@ -128,8 +128,6 @@ def get_question(x, y, e, a):
 
         while True:
 
-            print(a)
-            print(type(a))
             question = int(input((f"{x} {e} {y} = ")))
 
             if question != a:
