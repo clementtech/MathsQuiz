@@ -11,11 +11,14 @@ def main():
     equation = get_equation()
     length_of_equation = get_length()
 
+    print("Good luck! Type 'stop' anytime to end the quiz. Let's get started!")
     while True:
         number_x, number_y = get_number(length_of_equation)
         answer = get_answer(number_x, number_y, equation)
-        question = get_question(number_x, number_y, equation, answer)
 
+        question = get_question(number_x, number_y, equation, answer)
+        if question == False:
+            break
     
 
 
