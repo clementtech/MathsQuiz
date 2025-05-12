@@ -128,7 +128,7 @@ def get_question(x, y, e, a):
 
         while True:
 
-            question = input((f"{x} {e} {y} ="))
+            question = input((f"{x} {e} {y} = "))
 
             if question != a:
                 print("WRONG! Please try again.")
