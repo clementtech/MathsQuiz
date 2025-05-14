@@ -35,9 +35,9 @@ def get_equation():
 def get_length():
     while True:
         try:
-            length = int(input("Enter the length of the equation (choose a number between 1 and 10): "))
+            length = int(input("Enter the length of the equation (choose a number from 1 to 3): "))
 
-            if 1 <= length <= 10:
+            if 1 <= length <= 3:
                 return length
             
             else:
@@ -65,50 +65,6 @@ def get_number(length_of_equation):
         y = random.randint(100, 999)
 
         return (x, y)
-
-    elif length_of_equation == 4:
-        x = random.randint(1000, 9999)
-        y = random.randint(1000, 9999)
-
-        return (x, y)
-
-    elif length_of_equation == 5:
-        x = random.randint(10000, 99999)
-        y = random.randint(10000, 99999)
-
-        return (x, y)
-
-    elif length_of_equation == 6:
-        x = random.randint(100000, 999999)
-        y = random.randint(100000, 999999)
-
-        return (x, y)
-
-    elif length_of_equation == 7:
-        x = random.randint(1000000, 9999999)
-        y = random.randint(1000000, 9999999)
-
-        return (x, y)
-
-    elif length_of_equation == 8:
-        x = random.randint(10000000, 99999999)
-        y = random.randint(10000000, 99999999)
-
-        return (x, y)
-
-    elif length_of_equation == 9:
-        x = random.randint(100000000, 999999999)
-        y = random.randint(100000000, 999999999)
-
-        return (x, y)
-
-    elif length_of_equation == 10:
-        x = random.randint(1000000000, 9999999999)
-        y = random.randint(1000000000, 9999999999)
-
-        return (x, y)
-
-
 
 def get_answer(x, y, e):
 
